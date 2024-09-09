@@ -1,0 +1,13 @@
+name: secoms319-final
+
+services:
+  db:
+    build: .
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: adminpw
+      MYSQL_DATABASE: secoms319
+      MYSQL_USER: secoms319user
+      MYSQL_PASSWORD: secoms319pw
+    restart: always
